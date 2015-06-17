@@ -1,0 +1,2 @@
+gperftools/init.lua usr/share/tarantool/gperftools/
+gperftools/cpu.lua usr/share/tarantool/gperftools/

@@ -13,6 +13,7 @@ install_manifest.txt
 *.o
 *.reject
 *.so
+*.log
 *.snap*
 *.xlog*
 *~

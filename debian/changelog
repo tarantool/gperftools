@@ -1,0 +1,5 @@
+tarantool-gperftools (1.0.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Roman Tsisyk <roman@tarantool.org>  Wed, 17 Jun 2015 15:57:50 +0300
