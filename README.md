@@ -25,8 +25,8 @@ See [tarantool/rocks][TarantoolRocks] for LuaRocks configuration details.
 
 Start profiler:
 
-    tarantool> cpuprof = require(‘gperftools.cpu’)
-    tarantool> cpuprof.start(‘/home/roman/tarantool-on-production.prof’)
+    tarantool> cpuprof = require('gperftools.cpu')
+    tarantool> cpuprof.start('/home/roman/tarantool-on-production.prof')
 
 Wait some time to get performance metricrs to be collected
 (at least couple minutes).
