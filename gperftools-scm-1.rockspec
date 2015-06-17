@@ -20,7 +20,7 @@ external_dependencies = {
 build = {
     type = 'builtin',
     modules = {
-        ['gperftools'] = 'gperftools/init.lua'
+        ['gperftools'] = 'gperftools/init.lua',
         ['gperftools.cpu'] = 'gperftools/cpu.lua'
     }
 }
