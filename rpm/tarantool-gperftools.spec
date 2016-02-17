@@ -6,13 +6,20 @@ Group: Applications/Databases
 License: BSD
 URL: https://github.com/tarantool/tarantool-gperftools
 Source0: https://github.com/tarantool/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
-Requires: gperftools-libs
 BuildArch: noarch
+BuildRequires: tarantool >= 1.6.8.0
+BuildRequires: gperftools-devel
+BuildRequires: /usr/bin/prove
+Requires: tarantool >= 1.6.8.0
+Requires: gperftools-devel
 %description
 Lua bindings for Google Performance Tools CPU Profiler
 
 %prep
 %setup -q -n %{name}-%{version}
+
+%check
+prove -v ./test/gperftools.test.lua
 
 %install
 install -d %{buildroot}%{_datarootdir}/tarantool/gperftools
