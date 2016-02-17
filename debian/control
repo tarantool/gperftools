@@ -2,7 +2,9 @@ Source: tarantool-gperftools
 Priority: optional
 Section: database
 Maintainer: Roman Tsisyk <roman@tarantool.org>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9),
+               tarantool (>= 1.6.8.0),
+               libgoogle-perftools-dev
 Standards-Version: 3.9.6
 Homepage: https://github.com/tarantool/gperftools
 Vcs-Git: git://github.com/tarantool/gperftools.git
@@ -10,6 +12,6 @@ Vcs-Browser: https://github.com/tarantool/gperftools
 
 Package: tarantool-gperftools
 Architecture: all
-Depends: tarantool (>= 1.6.8.0), libgoogle-perftools4, ${misc:Depends}
+Depends: tarantool (>= 1.6.8.0), libgoogle-perftools-dev, ${misc:Depends}
 Description: Lua bindings for gperftools CPU profiler
  Lua bindings for Google Performance Tools CPU Profiler.

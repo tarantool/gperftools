@@ -2,3 +2,6 @@
 
 %:
 	dh $@
+
+override_dh_auto_test:
+	prove -v ./test/gperftools.test.lua
