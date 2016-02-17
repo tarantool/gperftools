@@ -1,15 +1,29 @@
-language: cpp
-compiler:
-  - gcc
+sudo: required
+services:
+  - docker
 
-install:
-  - uname -a
-  - lsb_release -c -s
-  - curl http://tarantool.org/dist/public.key | sudo apt-key add -
-  - echo "deb http://tarantool.org/dist/master/ubuntu/ `lsb_release -c -s` main" | sudo tee -a /etc/apt/sources.list.d/tarantool.list
-  - sudo apt-get update > /dev/null
-  - sudo apt-get -q install tarantool
-  - sudo apt-get -q install libgoogle-perftools4
+env:
+    global:
+      - PRODUCT=tarantool-gperftools
+    matrix:
+      - OS=el DIST=6 PACK=rpm
+      - OS=el DIST=7 PACK=rpm
+      - OS=fedora DIST=22 PACK=rpm
+      - OS=fedora DIST=23 PACK=rpm
+#      - OS=fedora DIST=rawhide PACK=rpm
+      - OS=ubuntu DIST=precise PACK=deb
+      - OS=ubuntu DIST=trusty PACK=deb
+      - OS=ubuntu DIST=wily PACK=deb
+      - OS=ubuntu DIST=xenial PACK=deb
+      - OS=debian DIST=wheezy PACK=deb
+      - OS=debian DIST=jessie PACK=deb
+      - OS=debian DIST=stretch PACK=deb
+#      - OS=debian DIST=sid PACK=deb
 
 script:
-  - prove ./test/gperftools.test.lua
+  - git clone https://github.com/tarantool/build.git
+  - ./build/pack/travis.sh
+
+notifications:
+  email: true
+  irc: false
