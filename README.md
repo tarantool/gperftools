@@ -49,6 +49,6 @@ Stop profiling when you don’t need it anymore:
  * [Tarantool][]
  * [Tarantool Rocks][TarantoolRocks]
 
-[gperftools]: http://gperftools.googlecode.com/git/doc/cpuprofile.html
+[gperftools]: https://gperftools.github.io/gperftools/cpuprofile.html
 [Tarantool]: http://github.com/tarantool/tarantool
 [TarantoolRocks]: https://github.com/tarantool/rocks
