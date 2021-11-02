@@ -1,7 +1,7 @@
 package = 'gperftools'
 version = '1.0.1-1'
 source  = {
-    url = 'git://github.com/tarantool/gperftools.git',
+    url = 'git+https://github.com/tarantool/gperftools.git',
     tag = '1.0.1',
 }
 description = {
