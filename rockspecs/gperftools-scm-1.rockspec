@@ -1,7 +1,7 @@
 package = 'gperftools'
 version = 'scm-1'
 source  = {
-    url    = 'git://github.com/tarantool/gperftools.git',
+    url    = 'git+https://github.com/tarantool/gperftools.git',
     branch = 'master',
 }
 description = {
